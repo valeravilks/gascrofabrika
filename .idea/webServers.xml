@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d97b9526-7e62-414b-b2b5-85bbb82716e0" name="MainServerAdmin" url="http://gastrofabrika.ru">
+        <fileTransfer rootFolder="/home/admin/web/kafe.valeravilks.ru/public_html/wp-content/themes/gastrofabrika" accessType="SFTP" host="213.226.126.192" port="22" sshConfigId="4521a1b7-0827-4421-b294-99ed6da6bc9f" sshConfig="admin@213.226.126.192:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
