@@ -4,7 +4,6 @@
 
 body {
     font-family: SF Pro Display, sans-serif;
-    background-color: red;
 }
 
 /* Reset style */
@@ -59,6 +58,15 @@ table {
     margin: 0 auto;
 }
 
+/* Common style */
+h1{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 112%;
+    color: #212121;
+}
+
 /* Header */
 
 .header-1 {
@@ -76,4 +84,56 @@ table {
     font-size: 12px;
     line-height: 84.19%;
     color: #FFFFFF;
+}
+
+.header-2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-2 .container {
+    display: flex;
+    min-height: 118px;
+    align-items: center;
+}
+
+.header-2 .menu-left, .header-2 .menu-right {
+    flex-grow: 1;
+}
+
+.header-2 ul {
+    display: flex;
+}
+
+.header-2 .menu-right ul {
+    justify-content: flex-end;
+}
+
+.header-2 a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.header-2 .menu-left a {
+    margin-right: 50px;
+}
+
+.header-2 .menu-right a {
+    margin-left: 50px;
+}
+
+/* Main page */
+
+.main-page h1{
+    margin: 100px 0 150px;
+    max-width: 750px;
+}
+
+.main-page .main-image {
+    height: 700px;
 }
