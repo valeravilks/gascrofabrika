@@ -68,3 +68,4 @@ function true_register_products() {
     );
     register_post_type('stocks',$args);
 }
+

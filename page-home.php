@@ -123,6 +123,58 @@ if( $images ): ?>
 
     wp_reset_postdata(); // сбрасываем переменную $post
     } ?>
+    <div class="container services">
+        <div class="block-1">
+            <?php
+            $service = get_field('service-1', 'option');
+            if( $service ): ?>
+                <h2><?php the_field('main-services', 'option') ?></h2>
+                <div class="img"
+                     style="background: url(<?php echo $service['img'] ?>)"
+                ></div>
+                <div class="title">
+                    <?php echo $service['title'] ?>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="block-2">
+            <?php
+            $service = get_field('service-2', 'option');
+            if( $service ): ?>
+                <div class="img"
+                     style="background: url(<?php echo $service['img'] ?>)"
+                ></div>
+                <div class="title">
+                    <?php echo $service['title'] ?>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="block-3">
+            <?php
+            $service = get_field('service-3', 'option');
+            if( $service ): ?>
+                <div class="img"
+                     style="background: url(<?php echo $service['img'] ?>)"
+                ></div>
+                <div class="title">
+                    <?php echo $service['title'] ?>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="block-4">
+            <?php
+            $service = get_field('service-4', 'option');
+            if( $service ): ?>
+                <div class="img"
+                     style="background: url(<?php echo $service['img'] ?>)"
+                ></div>
+                <div class="title">
+                    <?php echo $service['title'] ?>
+                </div>
+            <?php endif; ?>
+        </div>
+        <button>Подробнее</button>
+    </div>
 </main>
 
 <?php get_footer();
