@@ -26,19 +26,14 @@
     </div>
     <div class="header-2">
         <div class="container">
-            <div class="menu-left">
-                <?php wp_nav_menu( [
-                'theme_location'  => 'main-left-menu',
-                ] ); ?>
-            </div>
             <div class="logo">
                 <?php if( get_field('color-logo', 'option') ): ?>
                     <img src="<?php the_field('color-logo', 'option'); ?>" />
                 <?php endif; ?>
             </div>
-            <div class="menu-right">
+            <div class="menu">
                 <?php wp_nav_menu( [
-                    'theme_location'  => 'main-right-menu',
+                    'theme_location'  => 'main-menu',
                 ] ); ?>
             </div>
         </div>

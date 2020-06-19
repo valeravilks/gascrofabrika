@@ -34,7 +34,6 @@ if( function_exists('acf_add_options_page') ) {
 
 add_action( 'after_setup_theme', function(){
     register_nav_menus( [
-        'main-left-menu' => 'Меню в шапке слева',
-        'main-right-menu' => 'Меню в шапке справа'
+        'main-menu' => 'Меню в шапке',
     ] );
 } );
