@@ -67,6 +67,20 @@ h1{
     color: #212121;
 }
 
+h2 {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+    color: #212121;
+}
+
+p{
+    font-size: 16px;
+    line-height: 130%;
+    color: #212121;
+}
+
+
 /* Header */
 
 .header-1 {
@@ -133,3 +147,60 @@ h1{
 .main-page .main-image {
     height: 700px;
 }
+
+.main-page .about{
+    padding-top: 150px;
+    padding-bottom: 220px;
+    display: flex;
+}
+
+.main-page .about .head {
+    margin-bottom: 50px;
+}
+
+.main-page .about .left-block{
+    width: 600px;
+    margin-right: 150px;
+}
+
+.main-page .about .right-block{
+    height: 600px;
+    width: 450px;
+}
+
+.main-page .about .bullet{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-page .about .number{
+    font-size: 50px;
+    line-height: 60px;
+    color: #212121;
+    margin-bottom: 5px;
+}
+
+.main-page .about .text {
+    font-size: 14px;
+    line-height: 130%;
+    color: #212121;
+}
+
+.main-page .about .b-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main slider */
+
+.main-slider .one-slide{
+    height: 500px;
+    width: 683px;
+    transition: all .3s ease;
+}
+
+/*.main-slider .one-slide.swiper-slide-active {*/
+/*    transform: scale(1.2);*/
+/*}*/
