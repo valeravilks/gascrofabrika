@@ -83,7 +83,46 @@ if( $images ): ?>
             <div class="swiper-pagination"></div>
         </div>
         <?php endif; ?>
+    <?php
 
+    $args = array(
+        'posts_per_page' => 3,
+        'post_type' => 'stocks'
+    );
+    $query = new WP_Query( $args );
+    if( $query->have_posts() ){ ?>
+    <div class="stocks container">
+        <h2>
+            <?php the_field('main-stocks', 'option') ?>
+        </h2>
+        <p>
+            <?php the_field('main-stocks-text', 'option') ?>
+        </p>
+        <div class="content">
+
+            <?php
+                while( $query->have_posts() ){
+                    $query->the_post();
+                    ?>
+                    <div class="block">
+                        <div class="img"
+                             style="background: url(<?php the_field('stocks-img'); ?>)"
+                        >
+                        </div>
+                        <div class="title"><?php the_title(); ?></div>
+                    </div>
+              <?php
+            } ?>
+
+        </div>
+        <button>
+            Смотреть все
+        </button>
+    </div>
+    <?php
+
+    wp_reset_postdata(); // сбрасываем переменную $post
+    } ?>
 </main>
 
 <?php get_footer();

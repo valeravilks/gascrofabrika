@@ -80,6 +80,19 @@ p{
     color: #212121;
 }
 
+button {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #212121;
+    padding: 27px 72px;
+    background: none;
+    border: 1px solid #212121;
+}
+
 
 /* Header */
 
@@ -204,3 +217,41 @@ p{
 /*.main-slider .one-slide.swiper-slide-active {*/
 /*    transform: scale(1.2);*/
 /*}*/
+
+/* Main Stocks */
+
+.main-page .stocks h2{
+    margin-bottom: 50px;
+}
+
+.main-page .stocks p{
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.main-page .stocks .content{
+    display: flex;
+}
+
+.main-page .stocks .img{
+    width: 380px;
+    height: 450px;
+}
+
+.main-page .stocks .img:not(:last-child){
+    margin-right: 30px;
+}
+
+.main-page .stocks .title{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #212121;
+}
+
+.main-page .stocks button{
+    display: block;
+    margin: 0 auto;
+}
