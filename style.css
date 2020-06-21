@@ -320,3 +320,85 @@ button {
 .main-page .block-4{
     transform: translateY(-200px);
 }
+
+/* Footer */
+footer {
+    background-color: #212121;
+}
+
+.footer-1{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 75px 0 45px;
+}
+
+.footer-1 .container{
+    display: flex;
+}
+
+.footer-1 .container > * {
+    flex-grow: 1;
+}
+
+.footer-1 .menu a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.footer-1 .menu li{
+    margin-bottom: 10px;
+}
+
+.footer-1 .soc .block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-1 .soc .block .image-block {
+    display: flex;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+}
+
+.footer-1 .soc a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-left: 10px;
+}
+
+.footer-2 .copyright {
+    font-size: 12px;
+    line-height: 150%;
+    color: #FFFFFF;
+    opacity: 0.5;
+    width: 700px;
+}
+
+.footer-2 .container {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+}
+
+.footer-2 .menu {
+    display: flex;
+}
+
+.footer-2 .menu a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 150%;
+    color: #FFFFFF;
+    opacity: 0.5;
+    margin-right: 60px;
+}

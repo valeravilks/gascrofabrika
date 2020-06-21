@@ -37,6 +37,9 @@ if( function_exists('acf_add_options_page') ) {
 add_action( 'after_setup_theme', function(){
     register_nav_menus( [
         'main-menu' => 'Меню в шапке',
+        'footer-2-menu' => 'Меню во втором подвале',
+        'footer-menu-1-1' => 'Меню в первом подвалу 1',
+        'footer-menu-1-2' => 'Меню в первом подвалу 2'
     ] );
 } );
 
