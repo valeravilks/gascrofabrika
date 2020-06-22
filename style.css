@@ -457,62 +457,57 @@ footer {
 /* Gallery */
 
 .gallery .container {
-    padding: 100px 0 220px;
+    padding: 100px 0 220px
 }
 
 .gallery h1{
     margin-bottom: 100px;
 }
 
-.gallery img {
-    width: 100%;
-    height: auto;
+/* Stocks */
+
+.stocks {
+    padding: 100px 0 220px;
 }
 
-.grid {
-    max-width: 1200px;
+.stocks h1{
+    margin-bottom: 100px;
 }
 
-/* reveal grid after images loaded */
-.grid.are-images-unloaded {
+.stocks h2 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.stocks .block {
+    display: flex;
+}
+
+.stocks .block:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.stocks .img{
+    height: 300px;
+    flex: 0 0 500px;
+    margin-right: 100px;
+}
+
+.stocks .content {
+    flex-flow: 0;
+}
+
+.stocks hr{
+    margin: 50px 0;
+    opacity: 0.1;
+    border: 1px solid #000000;
+}
+
+.stocks hr:last-child {
+    display: none;
     opacity: 0;
 }
-
-.grid__item,
-.grid__col-sizer {
-    width: 32%;
-}
-
-.grid__gutter-sizer { width: 2%; }
-
-/* hide by default */
-.grid.are-images-unloaded .image-grid__item {
-    opacity: 0;
-}
-
-.grid__item {
-    margin-bottom: 20px;
-    float: left;
-}
-
-.grid__item--height1 { height: 140px; background: #EA0; }
-.grid__item--height2 { height: 220px; background: #C25; }
-.grid__item--height3 { height: 300px; background: #19F; }
-
-.grid__item--width2 { width: 66%; }
-
-.grid__item img {
-    display: block;
-    max-width: 100%;
-}
-
-
-.page-load-status {
-    display: none; /* hidden by default */
-    padding-top: 20px;
-    border-top: 1px solid #DDD;
-    text-align: center;
-    color: #777;
-}
-
-/* loader ellips in separate pen CSS */
