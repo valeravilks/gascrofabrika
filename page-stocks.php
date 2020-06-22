@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<main class="stocks">
+<main class="stocks-page">
     <div class="container">
         <h1 class="title">
             <?php the_title() ?>

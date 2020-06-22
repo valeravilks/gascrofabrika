@@ -79,10 +79,11 @@ if( $images ): ?>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
         <?php endif; ?>
+    <div class="container">
+        <div class="swiper-pagination"></div>
+    </div>
     <?php
 
     $args = array(
@@ -103,7 +104,7 @@ if( $images ): ?>
                 while( $query->have_posts() ){
                     $query->the_post();
                     ?>
-                    <div class="block">
+                    <div class="block-st">
                         <div class="img"
                              style="background: url(<?php the_field('stocks-img'); ?>)"
                         >

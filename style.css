@@ -58,6 +58,24 @@ table {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 300px;
+    }
+}
+
 /* Common style */
 h1{
     font-style: normal;
@@ -106,11 +124,36 @@ p{
     min-height: 50px;
 }
 
+@media screen and (max-width: 640px) {
+    .header-1 .container {
+        justify-content: space-between;
+    }
+}
+
 .header-1 .container > * {
     margin-left: 50px;
     font-size: 12px;
     line-height: 84.19%;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 1260px) {
+    .header-1 .container > * {
+        margin-left: 17px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-1 .container > * {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header-1 .container > * {
+        margin-left: 0;
+        font-size: 9px;
+    }
 }
 
 .header-2 {
@@ -214,14 +257,15 @@ p{
     transition: all .3s ease;
 }
 
-/*.main-slider .one-slide.swiper-slide-active {*/
-/*    transform: scale(1.2);*/
-/*}*/
+.main-slider .one-slide.swiper-slide-active {
+    transform: scale(1.2);
+}
 
 /* Main Stocks */
 
 .main-page .stocks{
-    margin-bottom: 220px
+    margin-bottom: 220px;
+    padding-top: 220px;
 }
 
 .main-page .stocks h2{
@@ -265,6 +309,7 @@ p{
 .main-page .services {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 220px;
 }
 
 .main-page .services h2 {
@@ -469,15 +514,15 @@ footer {
 
 /* Stocks */
 
-.stocks {
+.stocks-page {
     padding: 100px 0 220px;
 }
 
-.stocks h1{
+.stocks-page h1{
     margin-bottom: 100px;
 }
 
-.stocks h2 {
+.stocks-page h2 {
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
@@ -486,31 +531,31 @@ footer {
     margin-bottom: 50px;
 }
 
-.stocks .block {
+.stocks-page .block {
     display: flex;
 }
 
-.stocks .block:not(:last-child) {
+.stocks-page .block:not(:last-child) {
     margin-bottom: 50px;
 }
 
-.stocks .img{
+.stocks-page .img{
     height: 300px;
     flex: 0 0 500px;
     margin-right: 100px;
 }
 
-.stocks .content {
+.stocks-page .content {
     flex-flow: 0;
 }
 
-.stocks hr{
+.stocks-page hr{
     margin: 50px 0;
     opacity: 0.1;
     border: 1px solid #000000;
 }
 
-.stocks hr:last-child {
+.stocks-page hr:last-child {
     display: none;
     opacity: 0;
 }
