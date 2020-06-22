@@ -559,3 +559,63 @@ footer {
     line-height: 36px;
     color: #000000;
 }
+
+/* delivery */
+
+.delivery .container {
+    padding: 100px 0 220px;
+}
+
+.delivery .title{
+    padding-bottom: 100px;
+}
+
+.delivery .block{
+    display: flex;
+}
+
+.delivery .block .image{
+    flex: 0 0 600px;
+    height: 500px;
+    margin-left: 100px;
+}
+
+.delivery .block .text {
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.delivery .partner {
+    margin-top: 150px;
+}
+
+.delivery .partner .image {
+    height: 128px;
+    width: auto;
+}
+
+.delivery .block-2 {
+    display: flex;
+    margin-top: 220px;
+}
+
+.delivery .block-2 .image{
+    flex: 0 0 600px;
+    height: 500px;
+    margin-right: 100px;
+}
+
+.delivery .block-2 .head {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.delivery .block-2 .text {
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+}
