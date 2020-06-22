@@ -267,6 +267,10 @@ p{
     flex-wrap: wrap;
 }
 
+.main-page .services h2 {
+    flex: 0 0 100%;
+}
+
 .main-page .services button{
     margin: 25px auto 0;
 }
@@ -284,40 +288,39 @@ p{
     margin-bottom: 100px;
 }
 
-.main-page .block-1 {
+.main-page .block:nth-child(1) {
     margin-right: 150px;
 }
 
-.main-page .block-1 .img{
+.main-page .block:nth-child(1) .img{
     width: 450px;
     height: 600px;
 }
 
-.main-page .block-2 .img{
+.main-page .block:nth-child(2) .img{
     width: 600px;
     height: 550px;
 }
 
-.main-page .block-1 {
+.main-page .block:nth-child(1) {
     padding-bottom: 100px;
 }
 
-.main-page .block-3 .img{
+.main-page .block:nth-child(3) .img{
     width: 600px;
     height: 550px;
 }
 
-.main-page .block-3 {
+.main-page .block:nth-child(3) {
     margin-right: 150px;
 }
 
-.main-page .block-4 .img{
-
+.main-page .block:nth-child(4) .img{
     width: 450px;
     height: 600px;
 }
 
-.main-page .block-4{
+.main-page .block:nth-child(4){
     transform: translateY(-200px);
 }
 
@@ -514,38 +517,38 @@ footer {
 
 /* Services */
 
-.services .container {
+.services-page .container {
     padding: 100px 0 220px;
 }
 
-.services h1 {
+.services-page h1 {
     padding-bottom: 100px;
 }
 
-.services .img{
+.services-page .img{
     height: 500px;
     width: 500px;
     flex: 0 0 500px
 }
 
-.services .block:nth-child(2n + 1) .img{
+.services-page .block:nth-child(2n + 1) .img{
     margin-right: 100px;
 }
 
-.services .block:nth-child(2n) .img{
+.services-page .block:nth-child(2n) .img{
     margin-left: 100px;
     order: 2;
 }
 
-.services .block{
+.services-page .block{
     display: flex;
 }
 
-.services .block:not(:last-child) {
+.services-page .block:not(:last-child) {
     margin-bottom: 100px;
 }
 
-.services h2{
+.services-page h2{
     font-weight: 300;
     font-size: 30px;
     line-height: 36px;
@@ -553,7 +556,7 @@ footer {
     margin-bottom: 50px;
 }
 
-.services .text {
+.services-page .text {
     font-weight: 300;
     font-size: 30px;
     line-height: 36px;
@@ -615,6 +618,65 @@ footer {
 }
 
 .delivery .block-2 .text {
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+}
+
+/* About */
+
+.about-page .container {
+    padding: 100px 0 220px;
+}
+
+.about-page .title {
+    padding-bottom: 100px;
+}
+
+.about-page .image {
+    height: 500px;
+}
+
+.about-page .text {
+    margin-top: 100px;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 170px;
+    column-count: 2;
+    column-gap: 100px;
+    column-width: 500px;
+    padding-right: 100px;
+}
+
+.about-page h2 {
+    margin-bottom: 100px;
+}
+
+.about-page .team{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-page .team .block {
+    flex: 0 0 380px;
+    margin-bottom: 50px;
+}
+
+.about-page .team .image {
+    height: 450px;
+}
+
+.about-page .team .fio {
+    margin: 20px 0 10px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.about-page .team .dolg {
     font-size: 16px;
     line-height: 130%;
     color: #000000;

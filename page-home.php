@@ -99,7 +99,6 @@ if( $images ): ?>
             <?php the_field('main-stocks-text', 'option') ?>
         </p>
         <div class="content">
-
             <?php
                 while( $query->have_posts() ){
                     $query->the_post();
@@ -124,55 +123,44 @@ if( $images ): ?>
     wp_reset_postdata(); // сбрасываем переменную $post
     } ?>
     <div class="container services">
-        <div class="block-1">
+
+        <?php
+
+        $args = array(
+            'posts_per_page' => 10,
+            'post_type' => 'services',
+            'order' => 'ASC'
+        );
+        $query = new WP_Query( $args );
+        if( $query->have_posts() ){ ?>
             <?php
-            $service = get_field('service-1', 'option');
-            if( $service ): ?>
-                <h2><?php the_field('main-services', 'option') ?></h2>
-                <div class="img"
-                     style="background: url(<?php echo $service['img'] ?>)"
-                ></div>
-                <div class="title">
-                    <?php echo $service['title'] ?>
+            $i = true;
+            while( $query->have_posts() ){
+                $query->the_post();
+
+                ?>
+                <div class="block">
+
+                <?php if($i) :
+                ?>
+
+                    <h2><?php the_field('main-services', 'option') ?></h2>
+                <?php endif;
+                $i = false; ?>
+                    <div class="img"
+                         style="background: url(<?php the_field('services-image')?>)"
+                    ></div>
+                    <div class="title">
+                        <?php the_title()?>
+                    </div>
+
                 </div>
-            <?php endif; ?>
-        </div>
-        <div class="block-2">
+                <?php
+            } ?>
             <?php
-            $service = get_field('service-2', 'option');
-            if( $service ): ?>
-                <div class="img"
-                     style="background: url(<?php echo $service['img'] ?>)"
-                ></div>
-                <div class="title">
-                    <?php echo $service['title'] ?>
-                </div>
-            <?php endif; ?>
-        </div>
-        <div class="block-3">
-            <?php
-            $service = get_field('service-3', 'option');
-            if( $service ): ?>
-                <div class="img"
-                     style="background: url(<?php echo $service['img'] ?>)"
-                ></div>
-                <div class="title">
-                    <?php echo $service['title'] ?>
-                </div>
-            <?php endif; ?>
-        </div>
-        <div class="block-4">
-            <?php
-            $service = get_field('service-4', 'option');
-            if( $service ): ?>
-                <div class="img"
-                     style="background: url(<?php echo $service['img'] ?>)"
-                ></div>
-                <div class="title">
-                    <?php echo $service['title'] ?>
-                </div>
-            <?php endif; ?>
-        </div>
+
+            wp_reset_postdata(); // сбрасываем переменную $post
+        } ?>
         <button class="button-primary">Подробнее</button>
     </div>
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;source=constructor" width="100%" height="482" frameborder="0"></iframe>

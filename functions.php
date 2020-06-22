@@ -96,5 +96,25 @@ function true_register_products() {
         'supports' => array(),
     );
     register_post_type('services',$args2);
+
+    $labels3 = array(
+        'name' => 'Команда',
+        'singular_name' => 'Команда', // админ панель Добавить->Функцию
+        'add_new' => 'Добавить в команду',
+        'add_new_item' => 'Добавить в команду', // заголовок тега <title>
+        'edit_item' => 'Редактировать участника команды',
+        'new_item' => 'Новый участник команды',
+        'all_items' => 'Вся команда',
+        'menu_name' => 'Команда' // ссылка в меню в админке
+    );
+    $args3 = array(
+        'labels' => $labels3,
+        'public' => true, // благодаря этому некоторые параметры можно пропустить
+        'menu_icon' => 'dashicons-cart', // иконка корзины
+        'menu_position' => 6,
+        'has_archive' => true,
+        'supports' => array(),
+    );
+    register_post_type('team',$args3);
 }
 

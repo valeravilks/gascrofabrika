@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-    <main class="services">
+    <main class="services-page">
         <div class="container">
             <h1 class="title">
                 <?php the_title() ?>
