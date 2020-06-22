@@ -72,5 +72,29 @@ function true_register_products() {
         'taxonomies' => array('post_tag')
     );
     register_post_type('stocks',$args);
+
+    $labels2 = array(
+        'name' => 'Услуги',
+        'singular_name' => 'Услуги', // админ панель Добавить->Функцию
+        'add_new' => 'Добавить услугу',
+        'add_new_item' => 'Добавить новую услугу', // заголовок тега <title>
+        'edit_item' => 'Редактировать услугу',
+        'new_item' => 'Новая услуга',
+        'all_items' => 'Все услуги',
+        'view_item' => 'Просмотр услуги на сайте',
+        'search_items' => 'Искать услуги',
+        'not_found' =>  'Услуг не найдено.',
+        'not_found_in_trash' => 'Нет услуг.',
+        'menu_name' => 'Услугу' // ссылка в меню в админке
+    );
+    $args2 = array(
+        'labels' => $labels2,
+        'public' => true, // благодаря этому некоторые параметры можно пропустить
+        'menu_icon' => 'dashicons-cart', // иконка корзины
+        'menu_position' => 5,
+        'has_archive' => true,
+        'supports' => array(),
+    );
+    register_post_type('services',$args2);
 }
 
