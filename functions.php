@@ -8,6 +8,8 @@ function theme_name_scripts() {
 
 	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'infinite-scroll', get_template_directory_uri() . '/js/infinite-scroll.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 }
 

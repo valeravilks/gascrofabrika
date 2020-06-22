@@ -115,7 +115,7 @@ if( $images ): ?>
             } ?>
 
         </div>
-        <button>
+        <button class="button-primary">
             Смотреть все
         </button>
     </div>
@@ -173,7 +173,7 @@ if( $images ): ?>
                 </div>
             <?php endif; ?>
         </div>
-        <button>Подробнее</button>
+        <button class="button-primary">Подробнее</button>
     </div>
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;source=constructor" width="100%" height="482" frameborder="0"></iframe>
 </main>

@@ -79,6 +79,27 @@
                     </div>
                 <?php endif; ?>
             </div>
+            <!--todo доработать кнопку -->
+            <div class="subscription">
+                <div class="text">
+                    Подпишитесь на рассылку
+                </div>
+                <form action="">
+                    <input class="email" type="email" placeholder="Ваш e-mail">
+                    <button
+                        class="submit"
+                        type="submit">
+                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.35045 1.3515L1.32698 0.357246L11.2863 10.4973L11.7575 11.0001L11.2871 11.5028L1.32744 21.6432L0.35045 20.6485L9.65847 11.1752L9.83063 11L9.65847 10.8248L0.35045 1.3515Z" fill="#282828" stroke="#282828" stroke-width="0.5"/>
+                        </svg>
+                    </button>
+                </form>
+                <div class="pay">
+                    <img src="<?php echo get_template_directory_uri() . '/image/pay/viza.svg' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/image/pay/paypal.svg' ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/image/pay/masterCart.svg' ?>" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer-2">

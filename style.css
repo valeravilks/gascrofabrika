@@ -80,7 +80,7 @@ p{
     color: #212121;
 }
 
-button {
+.button-primary {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -328,15 +328,12 @@ footer {
 
 .footer-1{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 75px 0 45px;
+    padding: 75px 0 50px;
 }
 
 .footer-1 .container{
     display: flex;
-}
-
-.footer-1 .container > * {
-    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .footer-1 .menu a {
@@ -376,6 +373,60 @@ footer {
     margin-left: 10px;
 }
 
+.footer-1 .subscription .text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.footer-1 .subscription .email{
+    background: #282828;
+    opacity: 0.8;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 150%;
+    color: white;
+    padding: 10px;
+    width: 230px;
+}
+
+.footer-1 .subscription .email::placeholder{
+    color: #828282
+}
+
+.footer-1 .subscription .email:focus {
+    outline: none;
+}
+
+.footer-1 .subscription form{
+    display: flex;
+}
+
+.footer-1 .subscription .submit{
+    border: none;
+    width: 40px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    color: #282828;
+    cursor: pointer;
+}
+
+.footer-1 .subscription .submit:focus{
+    outline: none;
+
+}
+
+.footer-1 .pay {
+    margin-top: 100px;
+}
+
+.footer-1 .pay img{
+    margin-right: 5px;
+}
+
 .footer-2 .copyright {
     font-size: 12px;
     line-height: 150%;
@@ -402,3 +453,66 @@ footer {
     opacity: 0.5;
     margin-right: 60px;
 }
+
+/* Gallery */
+
+.gallery .container {
+    padding: 100px 0 220px;
+}
+
+.gallery h1{
+    margin-bottom: 100px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.grid {
+    max-width: 1200px;
+}
+
+/* reveal grid after images loaded */
+.grid.are-images-unloaded {
+    opacity: 0;
+}
+
+.grid__item,
+.grid__col-sizer {
+    width: 32%;
+}
+
+.grid__gutter-sizer { width: 2%; }
+
+/* hide by default */
+.grid.are-images-unloaded .image-grid__item {
+    opacity: 0;
+}
+
+.grid__item {
+    margin-bottom: 20px;
+    float: left;
+}
+
+.grid__item--height1 { height: 140px; background: #EA0; }
+.grid__item--height2 { height: 220px; background: #C25; }
+.grid__item--height3 { height: 300px; background: #19F; }
+
+.grid__item--width2 { width: 66%; }
+
+.grid__item img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.page-load-status {
+    display: none; /* hidden by default */
+    padding-top: 20px;
+    border-top: 1px solid #DDD;
+    text-align: center;
+    color: #777;
+}
+
+/* loader ellips in separate pen CSS */
