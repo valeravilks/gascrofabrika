@@ -66,21 +66,21 @@ get_header();
         </div>
     </div>
 
-        <?php
-        $images = get_field('main-page-gallery', 'option');
+    <?php
+    $images = get_field('main-page-gallery', 'option');
 
-if( $images ): ?>
-        <div class="swiper-container main-slider">
-            <div class="swiper-wrapper">
-                <?php foreach( $images as $image ): ?>
-                    <div class="swiper-slide one-slide"
-                         style="background: url(<?php echo esc_url($image['sizes']['large']); ?>)"
-                    >
-                    </div>
-                <?php endforeach; ?>
-            </div>
+    if( $images ): ?>
+    <div class="swiper-container main-slider">
+        <div class="swiper-wrapper">
+            <?php foreach( $images as $image ): ?>
+                <div class="swiper-slide one-slide"
+                     style="background-image: url(<?php echo esc_url($image['sizes']['large']); ?>)"
+                >
+                </div>
+            <?php endforeach; ?>
         </div>
-        <?php endif; ?>
+    </div>
+    <?php endif; ?>
     <div class="container">
         <div class="swiper-pagination"></div>
     </div>

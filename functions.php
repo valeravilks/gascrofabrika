@@ -8,6 +8,7 @@ function theme_name_scripts() {
 
 	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'infinite-scroll', get_template_directory_uri() . '/js/infinite-scroll.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
@@ -22,12 +23,6 @@ if( function_exists('acf_add_options_page') ) {
         'capability' => 'edit_posts',
         'redirect' => false
     ));
-
-//    acf_add_options_sub_page(array(
-//        'page_title' => 'Общие настройки',
-//        'menu_title' => 'Общие настройки',
-//        'parent_slug' => 'theme-general-settings',
-//    ));
 //
 //    acf_add_options_sub_page(array(
 //        'page_title' => 'Theme Footer Settings',
@@ -118,3 +113,25 @@ function true_register_products() {
     register_post_type('team',$args3);
 }
 
+function remove_menus(){
+//    remove_menu_page( 'index.php' );                  //Консоль
+    remove_menu_page( 'edit.php' );                   //Записи
+//    remove_menu_page( 'upload.php' );                 //Медиафайлы
+//    remove_menu_page( 'edit.php?post_type=page' );    //Страницы
+    remove_menu_page( 'edit-comments.php' );          //Комментарии
+//    remove_menu_page( 'themes.php' );                 //Внешний вид
+//    remove_menu_page( 'plugins.php' );                //Плагины
+    remove_menu_page( 'users.php' );                  //Пользователи
+//    remove_menu_page( 'tools.php' );                  //Инструменты
+//    remove_menu_page( 'options-general.php' );        //Настройки
+}
+add_action( 'admin_menu', 'remove_menus' );
+
+//Modern Jquery
+add_action('wp_enqueue_scripts', 'nwd_modern_jquery');
+function nwd_modern_jquery() {
+    global $wp_scripts;
+    if(is_admin()) return;
+    $wp_scripts->registered['jquery-core']->src = get_stylesheet_directory_uri() .'/js/jquery.js';
+    $wp_scripts->registered['jquery']->deps = ['jquery-core'];
+}

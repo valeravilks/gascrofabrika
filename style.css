@@ -251,14 +251,19 @@ p{
 
 /* Main slider */
 
-.main-slider .one-slide{
+.one-slide{
     height: 500px;
     width: 683px;
     transition: all .3s ease;
 }
 
-.main-slider .one-slide.swiper-slide-active {
+.one-slide.swiper-slide-active {
     transform: scale(1.2);
+}
+
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Main Stocks */
@@ -546,7 +551,7 @@ footer {
 }
 
 .stocks-page .content {
-    flex-flow: 0;
+
 }
 
 .stocks-page hr{
@@ -573,7 +578,7 @@ footer {
 .services-page .img{
     height: 500px;
     width: 500px;
-    flex: 0 0 500px
+    flex: 0 0 500px;
 }
 
 .services-page .block:nth-child(2n + 1) .img{
@@ -725,4 +730,86 @@ footer {
     font-size: 16px;
     line-height: 130%;
     color: #000000;
+}
+
+/* Page main menu */
+.main-menu-page {
+    padding: 100px 0 220px;
+}
+
+.main-menu-page .count-2{
+    margin-top: 220px;
+}
+
+.main-menu-page .cont {
+    padding: 100px 0 0 220px;
+}
+
+.main-menu-page h1{
+    padding-bottom: 30px;
+}
+
+.main-menu-page .text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 100px;
+}
+
+.main-menu-page .block-day{
+    display: flex;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 30px;
+}
+
+.main-menu-page .block-day .day:not(:last-child) {
+    margin-right: 51px;
+}
+
+.main-menu-page .day {
+    position: relative;
+    border: none;
+    background: none;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    cursor: pointer;
+}
+
+.main-menu-page .day:before {
+    content: '';
+    position: absolute;
+    background-color: #212121;
+    left: 0;
+    right: 0;
+    bottom: -31px;
+    height: 2px;
+    opacity: 0;
+}
+
+.main-menu-page .day:focus{
+    outline: none;
+    border: none;
+}
+
+.main-menu-page .day.active:before{
+    opacity: 1;
+}
+
+.main-menu-page .menu-list {
+    padding-top: 80px;
+}
+
+.main-menu-page .menu-list .menu-block {
+    display: none;
+}
+
+.main-menu-page .menu-list .menu-block.active {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu-page .menu-list .image {
+    width: 580px;
 }

@@ -8,3 +8,12 @@ var swiper = new Swiper('.swiper-container', {
         clickable: true,
     },
 });
+
+$('.day').click(function(e){
+    $('.day').removeClass('active');
+    $(this).addClass('active');
+    $('.main-menu-page .menu-block').removeClass('active');
+    let ind = $('.main-menu-page .day').index(this);
+    $('.main-menu-page .menu-block').eq(ind).addClass('active');
+
+})
