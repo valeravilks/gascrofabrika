@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="header-2">
-        <div class="container">
+        <div class="container conts">
             <div class="logo">
                 <?php if( get_field('color-logo', 'option') ): ?>
                     <a href="<?php echo home_url(); ?>">
@@ -33,11 +33,20 @@
                     </a>
                 <?php endif; ?>
             </div>
-            <div class="menu">
+            <div class="menu-d">
                 <?php wp_nav_menu( [
                     'theme_location'  => 'main-menu',
                 ] ); ?>
             </div>
+            <div class="mobile-menu-list">
+                <div class="container">
+                    <?php wp_nav_menu( [
+                        'theme_location'  => 'main-menu',
+                    ] ); ?>
+                </div>
+            </div>
+            <img src="<?php echo get_template_directory_uri() . '/image/menu.svg'?>" alt="" class="mobile-menu">
+            <img src="<?php echo get_template_directory_uri() . '/image/menu-close.svg'?>" alt="" class="mobile-menu-close">
         </div>
     </div>
 </header>

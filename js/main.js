@@ -17,3 +17,15 @@ $('.day').click(function(e){
     $('.main-menu-page .menu-block').eq(ind).addClass('active');
 
 })
+
+$('.mobile-menu').click(function(){
+    $('.header-2').addClass('open')
+})
+
+$('.mobile-menu-close').click(function(){
+    $('.header-2').removeClass('open')
+})
+
+$( window ).resize(function() {
+    $('.header-2').removeClass('open')
+});

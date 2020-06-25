@@ -4,12 +4,12 @@
             <div class="logo">
                 <img src="<?php the_field('footer-logo', 'option') ?>" alt="">
             </div>
-            <div class="menu">
+            <div class="menu menu-1">
                 <?php wp_nav_menu( [
                     'theme_location'  => 'footer-menu-1-1',
                 ] ); ?>
             </div>
-            <div class="menu">
+            <div class="menu menu-2">
                 <?php wp_nav_menu( [
                     'theme_location'  => 'footer-menu-1-2',
                 ] ); ?>
