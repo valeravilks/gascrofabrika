@@ -1171,7 +1171,12 @@ footer {
 }
 
 @media screen and (max-width: 1260px) {
-
+    .main-menu-page .menu-list .image {
+        width: 460px;
+    }
+    .main-menu-page {
+        padding: 100px 0 200px;
+    }
     .contact-page form {
         flex: 0 0 380px;
         margin-right: 100px;
@@ -1198,7 +1203,14 @@ footer {
     .stocks-page {
         padding: 100px 0 150px;
     }
-
+    .one-slide{
+        height: 352px;
+        width: 503px;
+        transition: all .3s ease;
+    }
+    .swiper-pagination {
+        margin-top: 20px;
+    }
 }
 
 .stocks-page .h2-mobile {
@@ -1206,6 +1218,7 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
     .contact-page form {
         margin-right: 220px;
         margin-bottom: 100px;
@@ -1283,6 +1296,36 @@ footer {
     .stocks-page {
         padding: 100px 0 50px;
     }
+    .main-menu-page .block-day .day:not(:last-child) {
+         margin-right: 0;
+    }
+    .main-menu-page .block-day {
+        justify-content: space-between;
+    }
+    .main-menu-page .text {
+        margin-bottom: 50px;
+    }
+    main-menu-page .menu-list .image {
+        width: 460px;
+    }
+    .main-menu-page .menu-list .menu-block.active {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-menu-page .menu-list .image:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .main-menu-page .count-2 {
+        margin-top: 170px;
+    }
+    .main-menu-page {
+        padding: 100px 0 100px;
+    }
+    .one-slide{
+        height: 220px;
+        width: 300px;
+        transition: all .3s ease;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -1340,5 +1383,54 @@ footer {
     }
     .stocks-page {
         padding: 50px 0 50px!important;
+    }
+    .main-menu-page .block-day {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-menu-page .block-day {
+        border-bottom: none;
+    }
+    .main-menu-page .block-day .day {
+        margin-bottom: 15px;
+        padding: 0;
+    }
+    .main-menu-page .day:before {
+        bottom: -5px;
+
+    }
+    .main-menu-page .menu-list {
+        padding-top: 35px!important;
+    }
+    .main-menu-page .menu-list .image {
+        width: 300px!important;
+    }
+    .main-menu-page .menu-list .image:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .main-menu-page .count-2 {
+        margin-top: 100px;
+    }
+    .one-slide.swiper-slide-active {
+        transform: scale(1);
+    }
+    .swiper-slide {
+        height: 270px;
+
+    }
+    .one-slide{
+        height: 270px;
+        width: 100%;
+        transition: all .3s ease;
+    }
+    .swiper-pagination {
+        width: 300px;
+        margin-top: 10px;
+    }
+    .main-menu-page .count-2 {
+        padding: 50px 0 10px
+    }
+    .main-menu-page {
+        padding: 50px 0 50px;
     }
 }

@@ -14,7 +14,7 @@ get_header();
         </h1>
     </div>
     <div class="main-image"
-         style="background: url(
+         style="background-image: url(
             <?php if( get_field('image-1-main-page', 'option') ):
                 the_field('image-1-main-page', 'option');
             endif; ?>
