@@ -414,12 +414,32 @@ p{
 
 .main-page .main-image {
     height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-page .block .img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .main-page .about{
     padding-top: 150px;
     padding-bottom: 220px;
     display: flex;
+}
+
+.main-page .about .right-block {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-page .h2-m {
+    display: none;
+
 }
 
 .main-page .about .head {
@@ -434,6 +454,10 @@ p{
 .main-page .about .right-block{
     height: 600px;
     width: 450px;
+}
+
+.main-page .about .bullet-m {
+    display: none;
 }
 
 .main-page .about .bullet{
@@ -1211,6 +1235,52 @@ footer {
     .swiper-pagination {
         margin-top: 20px;
     }
+    .main-page .about .left-block {
+        width: 480px;
+        margin-right: 90px;
+    }
+    .main-page .about .right-block {
+        width: 390px;
+    }
+    .main-page .about .bullet {
+        padding-top: 30px;
+    }
+    .main-page .about .b-block {
+        align-items: flex-start;
+    }
+    .main-page .about {
+        padding-bottom: 200px;
+    }
+    .main-page .stocks {
+        margin-bottom: 200px;
+        padding-top: 200px;
+    }
+    .main-page .stocks .img {
+        width: 300px;
+        height: 360px;
+    }
+    .main-page .block:nth-child(1) .img {
+        width: 390px;
+        height: 520px;
+    }
+    .main-page .block:nth-child(2) .img {
+        width: 480px;
+        height: 440px;
+    }
+    .main-page .block:nth-child(1) {
+        margin-right: 90px;
+    }
+    .main-page .block:nth-child(3) .img {
+        width: 480px;
+        height: 440px;
+    }
+    .main-page .block:nth-child(3) {
+        margin-right: 90px;
+    }
+    .main-page .block:nth-child(4) .img {
+        width: 390px;
+        height: 520px;
+    }
 }
 
 .stocks-page .h2-mobile {
@@ -1326,6 +1396,91 @@ footer {
         width: 300px;
         transition: all .3s ease;
     }
+    .main-page h1 {
+        margin: 100px 0 85px;
+        max-width: 750px;
+    }
+    .main-page .main-image {
+        height: 400px;
+    }
+    .main-page .about {
+        padding-top: 100px;
+    }
+    .main-page .about .left-block {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .main-page .about {
+        flex-wrap: wrap;
+    }
+    .main-page h2 {
+        font-size: 30px;
+        margin-bottom: 30px!important;
+    }
+    .main-page .about .bullet {
+        display: none;
+    }
+    .main-page .about .bullet-m {
+        display: block;
+    }
+    .main-page .about .right-block {
+        width: 100%;
+        height: 340px;
+        margin-bottom: 30px;
+    }
+    .main-page .about .bullet-m {
+        width: 100%;
+        display: flex;
+    }
+    .main-page .about .bullet-m > * {
+        margin-right: 100px;
+    }
+    .main-page .about {
+        padding-bottom: 80px;
+    }
+    .main-page .stocks {
+        margin-bottom: 100px;
+        padding-top: 100px;
+    }
+    .main-page .stocks .img {
+        width: 190px;
+        height: 228px;
+    }
+    .main-page .stocks .title {
+        margin-bottom: 50px;
+    }
+    .main-page .block .img {
+        width: 290px!important;
+        height: 320px!important;
+        margin: 0;
+    }
+    .main-page .block {
+        margin-right: 0!important;
+        margin-bottom: 50px;
+    }
+    .main-page .h2-m {
+        display: block;
+    }
+    .main-page .services .block h2{
+        display: none;
+    }
+    .main-page .block:nth-child(4) {
+        transform: translateY(0);
+    }
+    .main-page .services {
+        justify-content: space-between;
+    }
+    .main-page .services button {
+        margin: 0 auto;
+    }
+    .main-page .services {
+        padding-bottom: 100px;
+    }
+    .main-page .block{
+        padding-bottom: 0!important;
+
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -1432,5 +1587,48 @@ footer {
     }
     .main-menu-page {
         padding: 50px 0 50px;
+    }
+    .main-page h1 {
+        margin: 50px 0;
+        max-width: 750px;
+    }
+    .main-page .main-image {
+        height: 200px;
+    }
+    .main-page .about {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    .main-page .about .right-block {
+        height: 200px;
+    }
+    .main-page .about .b-block {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .main-page .about .bullet-m {
+        flex-wrap: wrap;
+    }
+    .main-page .stocks .img {
+        width: 300px;
+        height: 330px;
+    }
+    .main-page .stocks .content {
+        flex-wrap: wrap;
+    }
+    .main-page .stocks button {
+        margin: 0;
+        width: 100%;
+    }
+    .main-page .block .img {
+        width: 300px!important;
+        height: 330px!important;
+        margin: 0;
+    }
+    .main-page .services button {
+        margin: 0;
+        width: 100%;
+
     }
 }

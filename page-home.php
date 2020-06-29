@@ -61,8 +61,38 @@ get_header();
             </div>
         </div>
         <div class="right-block"
-             style="background: url(<?php the_field('main-page-about-image', 'option'); ?>)"
+             style="background-image: url(<?php the_field('main-page-about-image', 'option'); ?>)"
         >
+        </div>
+        <div class="bullet-m">
+            <?php
+            $hero = get_field('mp-about-tezis-block', 'option');
+            if( $hero ): ?>
+                <div class="b-block">
+                    <div class="number">
+                        <?php echo $hero['text-1']?>
+                    </div>
+                    <div class="text">
+                        <?php echo $hero['text-2']?>
+                    </div>
+                </div>
+                <div class="b-block">
+                    <div class="number">
+                        <?php echo $hero['text-3']?>
+                    </div>
+                    <div class="text">
+                        <?php echo $hero['text-4']?>
+                    </div>
+                </div>
+                <div class="b-block">
+                    <div class="number">
+                        <?php echo $hero['text-5']?>
+                    </div>
+                    <div class="text">
+                        <?php echo $hero['text-6']?>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 
@@ -123,7 +153,11 @@ get_header();
 
     wp_reset_postdata(); // сбрасываем переменную $post
     } ?>
+    <div class="container">
+        <h2 class="h2-m"><?php the_field('main-services', 'option') ?></h2>
+    </div>
     <div class="container services">
+
 
         <?php
 
