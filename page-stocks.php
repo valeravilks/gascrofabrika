@@ -24,10 +24,13 @@ get_header();
             while( $query->have_posts() ){
                 $query->the_post();
                 ?>
+                <div class="h2-mobile">
+                    <?php the_title()?>
+                </div>
                 <div class="block">
                     <div
                         class="img"
-                        style="background: url(<?php the_field('stocks-img')?>)"
+                        style="background-image: url(<?php the_field('stocks-img')?>)"
                     ></div>
                     <div class="content">
                         <h2>

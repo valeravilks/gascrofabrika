@@ -17,7 +17,7 @@ get_header();
                     <?php the_field('delivery-text-1')?>
                 </div>
                 <div class="image"
-                    style="background: url(<?php the_field('delivery-image-1')?>)"
+                    style="background-image: url(<?php the_field('delivery-image-1')?>)"
                 ></div>
             </div>
             <div class="partner">
@@ -32,7 +32,7 @@ get_header();
             </div>
             <div class="block-2">
                 <div class="image"
-                     style="background: url(<?php the_field('delivery-image-2')?>)"
+                     style="background-image: url(<?php the_field('delivery-image-2')?>)"
                 ></div>
                 <div class="content">
                     <h2 class="head">

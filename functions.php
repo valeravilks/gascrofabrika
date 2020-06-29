@@ -135,3 +135,19 @@ function nwd_modern_jquery() {
     $wp_scripts->registered['jquery-core']->src = get_stylesheet_directory_uri() .'/js/jquery.js';
     $wp_scripts->registered['jquery']->deps = ['jquery-core'];
 }
+
+function wpschool_disable_scripts_styles() {
+    wp_dequeue_style( 'wpforms-full-css' );
+}
+add_action( 'wp_enqueue_scripts', 'wpschool_disable_scripts_styles', 99 );
+
+function wpschool_show_script_style_ids() {
+    global $wp_scripts, $wp_styles;
+    echo "\n" .'<!--'. "\n\n";
+    echo 'SCRIPT IDs:'. "\n";
+    foreach( $wp_scripts->queue as $handle ) echo $handle . "\n";
+    echo "\n" .'STYLE IDs:'. "\n";
+    foreach( $wp_styles->queue as $handle ) echo $handle . "\n";
+    echo "\n" .'-->'. "\n\n";
+}
+add_action( 'wp_print_scripts', 'wpschool_show_script_style_ids' );
