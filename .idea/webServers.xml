@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="ab198838-8d35-4bbb-84f3-92f102ef7ba9" name="GastroFabrika" url="http://gastro-fabrika.ru">
+        <fileTransfer rootFolder="/home/c/cl43010/public_html/wp-content/themes/gastrofabrika" accessType="SFTP" host="5.23.50.132" port="22" sshConfigId="7142bf46-bf01-4cd9-9cca-bce7ec710794" sshConfig="cl43010@5.23.50.132:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

@@ -66,8 +66,9 @@ get_header();
         </div>
         <div class="bullet-m">
             <?php
-            $hero = get_field('mp-about-tezis-block', 'option');
+            $hero = get_field('mp-about-tezis-block');
             if( $hero ): ?>
+            
                 <div class="b-block">
                     <div class="number">
                         <?php echo $hero['text-1']?>
@@ -143,16 +144,19 @@ get_header();
                     </div>
               <?php
             } ?>
-
         </div>
-        <button class="button-primary">
-            Смотреть все
-        </button>
-    </div>
-    <?php
+        <?php
 
-    wp_reset_postdata(); // сбрасываем переменную $post
-    } ?>
+        wp_reset_postdata(); // сбрасываем переменную $post
+        } ?>
+        <div class="block2">
+            <a href="<?php the_field('main-stocksss')?>" class="button-primary">
+                Смотреть все
+            </a>
+        </div>
+    </div>
+
+
     <div class="container">
         <h2 class="h2-m"><?php the_field('main-services', 'option') ?></h2>
     </div>
@@ -196,8 +200,14 @@ get_header();
 
             wp_reset_postdata(); // сбрасываем переменную $post
         } ?>
-        <button class="button-primary">Подробнее</button>
+
+        <div class="block2">
+            <a href="<?php the_field('main-all-services')?>" class="button-primary">
+                Подробнее
+            </a>
+        </div>
     </div>
+
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;source=constructor" width="100%" height="482" frameborder="0"></iframe>
 </main>
 
