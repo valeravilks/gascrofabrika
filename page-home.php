@@ -10,9 +10,10 @@ get_header();
 <main class="main-page">
     <div class="container">
         <h1>
-            <?php the_field('title-main-page', 'option'); ?>
+            <?php the_field('title-main-page'); ?>
         </h1>
     </div>
+
     <div class="main-image"
          style="background-image: url(
             <?php if( get_field('image-1-main-page', 'option') ):
@@ -24,14 +25,15 @@ get_header();
     <div class="container about">
         <div class="left-block">
             <h2 class="head">
-                <?php the_field('main-page-about-title', 'option'); ?>
+                <?php the_field('main-page-about-title'); ?>
+
             </h2>
             <div class="content-text">
-                <?php the_field('main-page-about-description', 'option'); ?>
+                <?php the_field('main-page-about-description'); ?>
             </div>
             <div class="bullet">
                 <?php
-                $hero = get_field('mp-about-tezis-block', 'option');
+                $hero = get_field('mp-about-tezis-block');
                 if( $hero ): ?>
                     <div class="b-block">
                         <div class="number">
@@ -61,14 +63,14 @@ get_header();
             </div>
         </div>
         <div class="right-block"
-             style="background-image: url(<?php the_field('main-page-about-image', 'option'); ?>)"
+             style="background-image: url(<?php the_field('main-page-about-image'); ?>)"
         >
         </div>
         <div class="bullet-m">
             <?php
             $hero = get_field('mp-about-tezis-block');
             if( $hero ): ?>
-            
+
                 <div class="b-block">
                     <div class="number">
                         <?php echo $hero['text-1']?>
@@ -98,7 +100,7 @@ get_header();
     </div>
 
     <?php
-    $images = get_field('main-page-gallery', 'option');
+    $images = get_field('main-page-gallery');
 
     if( $images ): ?>
     <div class="swiper-container main-slider">
@@ -125,10 +127,10 @@ get_header();
     if( $query->have_posts() ){ ?>
     <div class="stocks container">
         <h2>
-            <?php the_field('main-stocks', 'option') ?>
+            <?php the_field('main-stocks') ?>
         </h2>
         <p>
-            <?php the_field('main-stocks-text', 'option') ?>
+            <?php the_field('main-stocks-text') ?>
         </p>
         <div class="content">
             <?php
@@ -137,7 +139,7 @@ get_header();
                     ?>
                     <div class="block-st">
                         <div class="img"
-                             style="background: url(<?php the_field('stocks-img'); ?>)"
+                             style="background-image: url(<?php the_field('stocks-img'); ?>)"
                         >
                         </div>
                         <div class="title"><?php the_title(); ?></div>
@@ -158,13 +160,13 @@ get_header();
 
 
     <div class="container">
-        <h2 class="h2-m"><?php the_field('main-services', 'option') ?></h2>
+        <h2 class="h2-m"><?php the_field('main-services') ?></h2>
     </div>
     <div class="container services">
 
 
         <?php
-
+        $h2 = get_field('main-services');
         $args = array(
             'posts_per_page' => 10,
             'post_type' => 'services',
@@ -183,16 +185,21 @@ get_header();
                 <?php if($i) :
                 ?>
 
-                    <h2><?php the_field('main-services', 'option') ?></h2>
+                    <h2><?php echo $h2 ?></h2>
                 <?php endif;
                 $i = false; ?>
                     <div class="img"
                          style="background: url(<?php the_field('services-image')?>)"
                     ></div>
-                    <div class="title">
-                        <?php the_title()?>
+                    <div class="s-block">
+                        <div class="title">
+                            <?php the_title()?>
+                        </div>
+                        <a href="<?php the_permalink(); ?>" class="service-link">
+                            Подробнее
+                            <img src="<?php echo get_template_directory_uri() . '/image/arrow-link.svg' ?>" alt="">
+                        </a>
                     </div>
-
                 </div>
                 <?php
             } ?>
@@ -208,8 +215,6 @@ get_header();
         </div>
     </div>
 
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;source=constructor" width="100%" height="482" frameborder="0"></iframe>
-</main>
-
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>
 <?php get_footer();
 ?>

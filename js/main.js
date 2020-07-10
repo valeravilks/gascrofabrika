@@ -1,12 +1,20 @@
-var swiper = new Swiper('.swiper-container', {
+let swipers;
+
+swipers = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     centeredSlides: true,
-    spaceBetween: 100,
+    spaceBetween: 0,
     grabCursor: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    breakpoints: {
+        // when window width is >= 320px
+        640: {
+            spaceBetween: 100,
+        }
+    }
 });
 
 $('.day').click(function(e){
@@ -26,9 +34,17 @@ $('.mobile-menu-close').click(function(){
     $('.header-2').removeClass('open')
 })
 
-$( window ).resize(function() {
-    $('.header-2').removeClass('open')
+var width = $(window).width();
+$(window).resize(function(){
+    if($(window).width() != width){
+        $('.header-2').removeClass('open');
+        console.log('swipers update')
+        swipers.update();
+
+        width = $(window).width();
+    }
 });
+
 
 $('.menu-d li:first-child a').click(function(e){
     e.preventDefault();

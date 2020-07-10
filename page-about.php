@@ -13,8 +13,9 @@ get_header();
             </h1>
             <div
                 class="image"
-                style="background: url(<?php the_field('about-image');?>)"
+                style="background-image: url(<?php the_field('about-image');?>)"
             ></div>
+
             <div class="text">
                 <?php the_field('about-text'); ?>
             </div>
@@ -37,7 +38,7 @@ get_header();
                             <div class="block">
                                 <div
                                     class="image"
-                                    style="background: url(<?php the_field('team-image'); ?>)"
+                                    style="background-image: url(<?php the_field('team-image'); ?>)"
                                 ></div>
                                 <div class="fio">
                                     <?php the_field('team-name'); ?>

@@ -16,15 +16,15 @@ get_header();
                 Напишите нам
             </div>
             <div class="block">
-<!--                --><?php //echo do_shortcode('[wpforms id="231" title="false" description="false"]')?>
-                <div class="sucsess">
-                    <div class="h">
-                        Спасибо!
-                    </div>
-                    <div class="t">
-                        Ваше сообщение отправлено.
-                    </div>
-                </div>
+                <?php echo do_shortcode('[wpforms id="231" title="false" description="false"]')?>
+<!--                <div class="sucsess">-->
+<!--                    <div class="h">-->
+<!--                        Спасибо!-->
+<!--                    </div>-->
+<!--                    <div class="t">-->
+<!--                        Ваше сообщение отправлено.-->
+<!--                    </div>-->
+<!--                </div>-->
                 <!--                <form action="">-->
 <!--                    <input type="text" name="name" placeholder="Имя">-->
 <!--                    <input type="email" name="email" placeholder="Email">-->
@@ -44,6 +44,9 @@ get_header();
                     </div>
                     <div>
                         <?php the_field('work-hours', 'option'); ?>
+                    </div>
+                    <div class="req">
+                        <?php the_field('reqiit', 'option')?>
                     </div>
                 </div>
                 <div class="soc">
@@ -80,7 +83,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;source=constructor" width="100%" height="482" frameborder="0"></iframe>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A274f6c883828e30abd3a733cbb6a9d6d2bd21782c8b4e494feeb2f5d2b7f4953&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>
 
     </main>
 

@@ -30,7 +30,7 @@ get_header();
                         <div class="block">
                             <div
                                 class="img"
-                                style="background: url(<?php the_field('services-image')?>)"
+                                style="background-image: url(<?php the_field('services-image')?>)"
                             ></div>
                             <div class="content">
                                 <h2>
@@ -38,6 +38,12 @@ get_header();
                                 </h2>
                                 <div class="text">
                                     <?php the_field('services-text')?>
+                                </div>
+                                <div class="b-link">
+                                    <a href="<?php the_permalink(); ?>" class="service-link">
+                                        Подробнее
+                                        <img src="<?php echo get_template_directory_uri() . '/image/arrow-link.svg' ?>" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
